@@ -1,0 +1,21 @@
+.availability {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+}
+
+.availability button {
+  height: 48px;
+  border-radius: 0;
+  padding: 8px 24px;
+}
+
+@media (max-width: 991px) {
+  .availability-content {
+    display: none;
+    visibility: hidden;
+  }
+
+  .availability-btn {
+    width: 80%;
+    margin: auto;
+  }
+}

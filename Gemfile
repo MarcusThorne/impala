@@ -58,3 +58,5 @@ gem 'simple_form'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'cloudinary', '~> 1.12.0'
 gem 'pg_search', '~> 2.3.0'
+# allows you to parse css
+gem 'autoprefixer-rails' 
