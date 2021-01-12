@@ -1,7 +1,7 @@
 const changeNavbar = () => {
   window.addEventListener('scroll', function() {
     let navbar = document.querySelector(".navbar-container")
-    let collapse = document.querySelector(".navbar-collapse")
+    let collapse = document.querySelector(".content-collapsed")
     let windowPosition = scrollY > 0
     
     navbar.classList.toggle('scrolling-active', windowPosition)
