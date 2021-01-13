@@ -1,1 +1,12 @@
 // Specific CSS for your home-page
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1600px !important;
+  }
+}
+
+.more-content-here {
+  height: 2000px;
+  margin: 200px;
+  padding: 1000px 0;
+}
