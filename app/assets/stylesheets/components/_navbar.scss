@@ -7,10 +7,10 @@
 }
 
 .navbar-container .navbar-center {
-  width: 30%;
   display: none;
   visibility: hidden;
   transition: .5s;
+  margin-left: -26px;
 }
 
 .navbar-container a {
@@ -32,7 +32,7 @@
   width: 100vw;
   z-index: 1000;
   top: 184px;
-  font-size: 20px;
+  font-size: 16px;
   padding-top: 24px;
   transition: .5s;
 }
@@ -48,15 +48,14 @@
 
 .scrolling-active-collapase {
   top: 64px !important;
-  font-size: 18px;
 }
 
 .navbar-container.scrolling-active img {
   width: 84px;
 }
 
-.navbar-container.scrolling-active a {
-  font-size: 12px;
+.navbar-container.scrolling-active .navbar-center {
+  margin-left: 0 !important;
 }
 
 @media(min-width: 425px) {
@@ -68,10 +67,6 @@
     width: 144px;
   }
 
-  .navbar-container.scrolling-active a {
-    font-size: 18px;
-  }
-
   .navbar-container.scrolling-active img {
     width: 120px;
   }
@@ -79,7 +74,7 @@
 
 @media(min-width: 768px) {
   .navbar-container a {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 

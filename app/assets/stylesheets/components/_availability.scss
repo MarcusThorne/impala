@@ -3,10 +3,11 @@
   display: flex;
 }
 
-.availability button {
-  height: 48px;
+.availability-btn {
   border-radius: 0;
-  padding: 8px 24px;
+  padding: 16px 28px;
+  margin: auto;
+  font-weight: bold;
 }
 
 .availability-content {
@@ -14,12 +15,11 @@
   visibility: hidden;
 }
 
-.availability-btn {
-  width: 80%;
-  margin: auto;
-}
-
 @media(min-width: 768px) {
+  .availability {
+    margin: 0 16px;
+  }
+
   .availability-content {
     display: inline-block;
     visibility: visible;
@@ -27,7 +27,35 @@
   }
 
   .availability-btn {
-    width: 200px;
     margin: auto 0;
+  }
+}
+
+@media(min-width: 1024px) {
+  .availability {
+    margin: 0 80px;
+  }
+
+  .availability-btn {
+    padding: 16px 40px;
+    font-size: 18px;
+  }
+}
+
+@media(min-width: 1440px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .availability {
+    margin: 0 160px;
+  }
+
+  .availability .availability-content h2 {
+    font-size: 40px;
+  }
+
+  .availability-btn {
+    font-size: 28px;
   }
 }

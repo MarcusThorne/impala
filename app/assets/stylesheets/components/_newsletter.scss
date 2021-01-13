@@ -1,0 +1,49 @@
+.newsletter {
+  // padding: 96px 344px !important;
+  padding: 22px;
+  margin-bottom: 120px;
+  margin: 20px;
+  border-top: none;
+}
+
+.newsletter .newsletter-text {
+  font-size: 20px;
+  max-width: 504px;
+  margin: 0 auto;
+}
+
+.newsletter-form {
+  height: 64px;
+}
+
+.newsletter-form .newsletter-submit {
+  font-size: 16px;
+  font-weight: bold;
+  color: grey;
+  background-color: white;
+  border-right: 1px solid grey;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-left: none;
+  padding: 0 16px;
+}
+
+.newsletter-form .newsletter-input {
+  border: 1px solid rgb(146, 146, 146);
+  // width: 712px;
+  font-size: 16px;
+  padding: 0 16px;
+}
+
+@media(min-width: 768px) {
+  .newsletter {
+    border: 1px solid rgb(235, 235, 235);
+    padding: 40px 104px !important;
+    margin: 0 40px;
+    width: 80% !important;
+  }
+
+  .newsletter-form .newsletter-input {
+    width: 60%;
+  }
+}
