@@ -1,15 +1,16 @@
 .about {
-  margin: 120px auto;
-}
-
-.about p {
-  margin: auto;
-  font-size: 20px;
-  color: gray;
+  margin: 120px 40px;
+  max-width: 1200px;
 }
 
 .about .underline {
   width: 120px;
   border-bottom: 4px solid red;
   margin: 40px auto;
+}
+
+@media(min-width: 768px) {
+  .about {
+    margin: 120px auto;
+  }
 }

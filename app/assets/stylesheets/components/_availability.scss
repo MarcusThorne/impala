@@ -1,61 +1,52 @@
 .availability {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.158);
-  display: flex;
+  border-bottom: 1px solid rgb(185, 185, 185);
 }
 
-.availability-btn {
-  border-radius: 0;
-  padding: 16px 28px;
-  margin: auto;
-  font-weight: bold;
-}
-
-.availability-content {
+.availability .options {
   display: none;
   visibility: hidden;
 }
 
-@media(min-width: 768px) {
-  .availability {
-    margin: 0 16px;
-  }
-
-  .availability-content {
-    display: inline-block;
-    visibility: visible;
-    margin: 0 16px;
-  }
-
-  .availability-btn {
-    margin: auto 0;
-  }
+.availability button {
+  padding: 16px 40px;
+  font-weight: bold;
+  display: flex;
+  margin: 40px auto;
 }
 
-@media(min-width: 1024px) {
+@media(min-width: 768px) {
   .availability {
-    margin: 0 80px;
+    margin: 0 40px;
   }
 
-  .availability-btn {
-    padding: 16px 40px;
-    font-size: 18px;
+  .availability .options {
+    display: flex;
+    visibility: visible;
+    justify-content: space-between;
+    padding: 40px 0 0 0;
   }
 }
 
 @media(min-width: 1440px) {
-  .title {
-    font-size: 20px;
-  }
-
   .availability {
-    margin: 0 160px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 96px;
   }
 
-  .availability .availability-content h2 {
-    font-size: 40px;
+  .availability button {
+    margin: auto 8px;
   }
 
-  .availability-btn {
-    font-size: 28px;
+  .availability .options {
+    width: 900px;
+    margin: 56px 0;
+    padding: 0;
+  }
+}
+
+@media(min-width: 1920px) {
+  .availability {
+    margin: 0 240px;
   }
 }
