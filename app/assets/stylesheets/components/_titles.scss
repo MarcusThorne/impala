@@ -1,26 +1,28 @@
+.title {
+  font-family: 'Public Sans', sans-serif;
+  transition: .5s;
+  color:#4a4a4a;
+  font-weight: 800;
+}
+
 .title-l {
   font-size: 32px;
-  transition: .5s;
 }
 
 .title-m {
   font-size: 28px;
-  transition: .5s;
 }
 
 .title-s {
   font-size: 26px;
-  transition: .5s;
 }
 
 .title-xs {
   font-size: 24px;
-  transition: .5s;
 }
 
 .title-xxs {
   font-size: 22px;
-  transition: .5s;
 }
 
 @media(min-width: 425px) {

@@ -1,0 +1,60 @@
+.link-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  margin-bottom: 200px;
+}
+
+.link-options .link-wraper {
+  overflow: hidden;
+}
+
+.link-options .link-option {
+  background-color: black;
+  padding: 35%;
+  text-align: center;
+  font-family: 'Londrina Shadow', cursive;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  text-shadow: 1px 1px 10px black;
+  transition: .5s;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.05);
+
+    .link-description {
+      display: flex;
+      visibility: visible;
+      position: absolute;
+      bottom: 24px;
+      z-index: 100;
+      transform: translate(-50%, -50%);
+      left: 50%;
+    }
+  }
+}
+
+.link-options .link-option .link-description {
+  display: none;
+  visibility: hidden;
+  transition: .5s;
+}
+
+.stay-image {
+  background-image: url("stay.jpg");
+}
+
+.eat-image {
+  background-image: url("eat.jpg");
+}
+
+.drink-image {
+  background-image: url("drink.jpg");
+}
+
+.explore-image {
+  background-image: url("explore.jpg");
+}
+
