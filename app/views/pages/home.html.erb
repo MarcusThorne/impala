@@ -19,25 +19,25 @@
 <div class="availability">
   <% @options.each do |o| %>
     <div class="option">
-      <h6 class="text text-s"><%= o[:title] %></h6>
-      <h2 class="title title-l"><%= o[:date] %></h2>
+      <h6 class="text text-xxs"><%= o[:title] %></h6>
+      <h2 class="title text-xl"><%= o[:date] %></h2>
     </div>
   <% end %>
-  <button class="btn-danger text-light text-uppercase font-weight-bold d-flex justify-content-center title text-l">Check Availability</button>
+  <button class="btn-danger text-light text-uppercase font-weight-bold d-flex justify-content-center title text-s">Check Availability</button>
 </div>
 
 <div class="about d-flex flex-column text-center justify-content-around">
-  <h1 class="font-weight-bold mb-4 title-l title">ABOUT IMPALA</h1>
-  <p class="text-l text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias delectus possimus necessitatibus debitis, repellat, natus voluptate a at, dolore animi nesciunt accusamus enim dignissimos? Repellat deleniti vel pariatur tempore.</p>
+  <h1 class="font-weight-bold mb-4 title-xs title">ABOUT IMPALA</h1>
+  <p class="text-s text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias delectus possimus necessitatibus debitis, repellat, natus voluptate a at, dolore animi nesciunt accusamus enim dignissimos? Repellat deleniti vel pariatur tempore.</p>
   <div class="underline"></div>
 </div>
 
 <div class="link-options container">
   <% @navLinks.each do |t| %>
     <div class="link-wraper">
-      <div class="<%= t[:title] %>-image link-option display-1">
+      <div class="<%= t[:title] %>-image link-option display-3">
         <%= t[:title] %>
-        <p class="link-description text text-s text-light"><%= t[:description] %></p>
+        <p class="link-description text text-xs text-light"><%= t[:description] %></p>
       </div>
     </div>
   <% end %>
@@ -46,20 +46,20 @@
 <%# <div class="map-container">
   <div class="map-background"></div>
   <div class="bg-white">
-    <p class="font-weight-bold mb-4 title-l title text-uppercase">Our Location</p>
+    <p class="font-weight-bold mb-4 title-xs title text-uppercase">Our Location</p>
   </div>
   <img class="map-image" src="/assets/africa.png" alt="">
 </div> %>
 
 <div class="blogs container">
-  <p class="title title-l text-uppercase font-weight-bold">Blogs and news</p>
+  <p class="title title-xxs text-uppercase font-weight-bold">Blogs and news</p>
   <div class="underline"></div>
   <div class="slick row">
     <% @blogs.each do |b| %>
       <div class="blog">
         <img src="/assets/<%= b[:image] %>.jpg" alt="" class="blog-image" >
-        <h2 class="blog-title title text-l mt-3"><%= b[:title] %></h2>
-        <p class="blog-info text text-s mt-4"><%= b[:source] %></p>
+        <h2 class="blog-title title text-xs mt-3"><%= b[:title] %></h2>
+        <p class="blog-info text text-xxs mt-4"><%= b[:source] %></p>
       </div>
     <% end %>
   </div>
@@ -71,7 +71,7 @@
 <div class="newsletter text-center mb-5">
   <div class="newsletter-content">
     <h1 class="display-5 font-weight-bold mb-3 title title-l" style="font-family: 'Volkhov', serif;">Impala Newsletter</h1>
-    <p class="mb-4 text text-m fw-lighter">Quos nostrum quibusdam nihil tempora numquam eligendi mollitia vero necessitatibus consequuntur saepe?</p>
+    <p class="mb-4 text text-xxs fw-lighter">Quos nostrum quibusdam nihil tempora numquam eligendi mollitia vero necessitatibus consequuntur saepe?</p>
     <div class="newsletter-input input-group mb-3">
       <input type="text" class="form-control text-m" placeholder="Email Address" aria-label="Email Address" aria-describedby="button-addon2">
       <button class="btn btn-outline-secondary title text-m" type="button" id="button-addon2">Sign Up</button>

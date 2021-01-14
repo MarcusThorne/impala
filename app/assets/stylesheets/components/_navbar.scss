@@ -1,15 +1,16 @@
 .navbar-container {
   justify-content: space-between;
   background: white;
-  padding: 64px 8px !important;
+  padding: 40px 8px !important;
   transition: .5s;
 }
+
 
 .navbar-container .navbar-center {
   display: none;
   visibility: hidden;
   transition: .5s;
-  margin-left: -26px;
+  margin-left: -80px;
 }
 
 .navbar-container .navbar-collapse {
@@ -35,8 +36,8 @@
 }
 
 .scrolling-active {
-  padding-top: 12px !important;
-  padding-bottom: 12px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
 }
 
 .scrolling-active-collapase {
@@ -67,7 +68,7 @@
   }
 
   .navbar-container.scrolling-active img {
-    width: 152px;
+    width: 104px;
   }
 
   .navbar-content {
@@ -77,10 +78,6 @@
   .navbar-container .navbar-center {
     display: flex;
     visibility: visible;
-  }
-
-  .navbar-container {
-    padding: 64px !important;
   }
 
   .navbar-container.scrolling-active {

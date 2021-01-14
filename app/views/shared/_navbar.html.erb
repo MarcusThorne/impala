@@ -4,11 +4,11 @@
     <a class="navbar-brand" href="#"><img src="/assets/logo.png" alt=""></a>
     <div class="justify-content-center font-weight-bold navbar-center">
       <% @navLinks.each do |n| %>
-        <a class="nav-link mx-1 text-uppercase title text-m" href=""><%= n[:title] %></a>
+        <a class="nav-link mx-1 text-uppercase title text-xxs" href=""><%= n[:title] %></a>
       <% end %>
     </div>
     <div>
-      <a class="text-danger mr-2 title text-m" href="#">BOOK NOW</a>
+      <a class="text-danger mr-2 title text-xxs" href="#">BOOK NOW</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -21,7 +21,7 @@
   <div class="extended-content">
     <ul class="navbar-collapse container text-end font-weight-bold text-center" id="navbarToggleExternalContent">
       <% @navLinks.each do |n| %>
-        <a class="nav-link text-dark my-4 text-uppercase title text-m" href=""><%= n[:title] %></a>
+        <a class="nav-link text-dark my-4 text-uppercase title text-xxs" href=""><%= n[:title] %></a>
         <div class="underline border-bottom"></div>
       <% end %>
     </ul>
