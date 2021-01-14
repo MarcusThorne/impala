@@ -1,26 +1,27 @@
+.text {
+  transition: .5s;
+  color: #a3a3a3;
+  font-family: 'EB Garamond', serif;
+}
+
 .text-xl {
   font-size: 19px;
-  transition: .5s;
 }
 
 .text-l {
   font-size: 17px;
-  transition: .5s;
 }
 
 .text-m {
   font-size: 15px;
-  transition: .5s;
 }
 
 .text-s {
   font-size: 13px;
-  transition: .5s;
 }
 
 .text-xs {
   font-size: 11px;
-  transition: .5s;
 }
 
 @media(min-width: 425px) {
