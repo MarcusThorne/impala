@@ -1,49 +1,39 @@
 .newsletter {
-  // padding: 96px 344px !important;
-  padding: 22px;
-  margin-bottom: 120px;
-  margin: 20px;
-  border-top: none;
+  margin: 32px auto;
+  max-width: 280px;
 }
 
-.newsletter .newsletter-text {
-  font-size: 20px;
-  max-width: 504px;
-  margin: 0 auto;
+.newsletter .newsletter-input input {
+  border-radius: 4px 0 0 4px;
+  border-right: none;
 }
 
-.newsletter-form {
-  height: 64px;
+.newsletter .newsletter-input button {
+  border-radius: 0 4px 4px 0;
 }
 
-.newsletter-form .newsletter-submit {
-  font-size: 16px;
-  font-weight: bold;
-  color: grey;
-  background-color: white;
-  border-right: 1px solid grey;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
-  border-left: none;
-  padding: 0 16px;
-}
-
-.newsletter-form .newsletter-input {
-  border: 1px solid rgb(146, 146, 146);
-  // width: 712px;
-  font-size: 16px;
-  padding: 0 16px;
+@media(min-width: 425px) {
+  .newsletter {
+    max-width: 360px;
+  }
 }
 
 @media(min-width: 768px) {
   .newsletter {
-    border: 1px solid rgb(235, 235, 235);
-    padding: 40px 104px !important;
-    margin: 0 40px;
-    width: 80% !important;
+    border: 1px solid lightgray;
+    max-width: 1500px;
+    margin: 32px 80px;
+    padding: 64px 40px;
   }
 
-  .newsletter-form .newsletter-input {
-    width: 60%;
+  .newsletter-content {
+    max-width: 600px;
+    margin: auto;
+  }
+}
+
+@media(min-width: 1600px) {
+  .newsletter {
+    margin: 32px auto;
   }
 }

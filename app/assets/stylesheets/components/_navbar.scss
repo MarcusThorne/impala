@@ -1,8 +1,7 @@
 .navbar-container {
   justify-content: space-between;
   background: white;
-  padding-top: 64px !important;
-  padding-bottom: 64px !important;
+  padding: 64px 8px !important;
   transition: .5s;
 }
 
@@ -11,11 +10,6 @@
   visibility: hidden;
   transition: .5s;
   margin-left: -26px;
-}
-
-.navbar-container a {
-  font-size: 14px;
-  transition: .5s;
 }
 
 .navbar-container .navbar-collapse {
@@ -32,7 +26,6 @@
   width: 100vw;
   z-index: 1000;
   top: 184px;
-  font-size: 16px;
   padding-top: 24px;
   transition: .5s;
 }
@@ -59,22 +52,12 @@
 }
 
 @media(min-width: 425px) {
-  .navbar-container a {
-    font-size: 20px;
-  }
-
   .navbar-container .navbar-brand img {
     width: 144px;
   }
 
   .navbar-container.scrolling-active img {
     width: 120px;
-  }
-}
-
-@media(min-width: 768px) {
-  .navbar-container a {
-    font-size: 24px;
   }
 }
 

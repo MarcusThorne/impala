@@ -1,0 +1,90 @@
+.text-xl {
+  font-size: 19px;
+  transition: .5s;
+}
+
+.text-l {
+  font-size: 17px;
+  transition: .5s;
+}
+
+.text-m {
+  font-size: 15px;
+  transition: .5s;
+}
+
+.text-s {
+  font-size: 13px;
+  transition: .5s;
+}
+
+.text-xs {
+  font-size: 11px;
+  transition: .5s;
+}
+
+@media(min-width: 425px) {
+  .text-xl {
+    font-size: 22px;
+  }
+
+  .text-l {
+    font-size: 20px;
+  }
+
+  .text-m {
+    font-size: 18px;
+  }
+  
+  .text-s {
+    font-size: 16px;
+  }
+
+  .text-xs {
+    font-size: 14px;
+  }
+}
+
+@media(min-width: 768px) {
+  .text-xl {
+    font-size: 25px;
+  }
+
+  .text-l {
+    font-size: 23px;
+  }
+
+  .text-m {
+    font-size: 21px;
+  }
+  
+  .text-s {
+    font-size: 19px;
+  }
+
+  .text-xs {
+    font-size: 17px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .text-xl {
+    font-size: 28px;
+  }
+
+  .text-l {
+    font-size: 26px;
+  }
+
+  .text-m {
+    font-size: 24px;
+  }
+  
+  .text-s {
+    font-size: 22px;
+  }
+
+  .text-xs {
+    font-size: 20px;
+  }
+}

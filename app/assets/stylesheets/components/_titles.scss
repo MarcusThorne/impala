@@ -1,0 +1,93 @@
+.title-l {
+  font-size: 32px;
+  transition: .5s;
+}
+
+.title-m {
+  font-size: 28px;
+  transition: .5s;
+}
+
+.title-s {
+  font-size: 26px;
+  transition: .5s;
+}
+
+.title-xs {
+  font-size: 24px;
+  transition: .5s;
+}
+
+.title-xxs {
+  font-size: 22px;
+  transition: .5s;
+}
+
+@media(min-width: 425px) {
+  .title-l {
+    font-size: 36px;
+  }
+
+  .title-m {
+    font-size: 34px;
+  }
+
+  .title-s {
+    font-size: 32px;
+  }
+
+  .title-xs {
+    font-size: 30px;
+    transition: .5s;
+  }
+
+  .title-xxs {
+    font-size: 28px;
+  }
+}
+
+@media(min-width: 768px) {
+  .title-l {
+    font-size: 40px;
+  }
+
+  .title-m {
+    font-size: 38px;
+  }
+
+  .title-s {
+    font-size: 36px;
+  }
+
+  .title-xs {
+    font-size: 34px;
+    transition: .5s;
+  }
+
+  .title-xxs {
+    font-size: 32px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .title-l {
+    font-size: 44px;
+  }
+
+  .title-m {
+    font-size: 42px;
+  }
+
+  .title-s {
+    font-size: 40px;
+  }
+
+  .title-xs {
+    font-size: 38px;
+    transition: .5s;
+  }
+
+  .title-xxs {
+    font-size: 36px;
+  }
+}
