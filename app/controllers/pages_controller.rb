@@ -15,10 +15,10 @@ class PagesController < ApplicationController
       { title: 'An even different title of a blog that someone wrote', image: 'food', source: 'Sourced from blah / 43 days ago' },
       { title: 'Awesome Blog post', image: 'food', source: 'Sourced from wikapedia / 76 days ago' }
     ]
-    @navLinks = [{ title: 'stay', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab nam architecto odit beatae rerum nesciunt maiores eligendi, perferendis velit eum quo cumque officia! Fuga saepe, enim vel excepturi molestias fugit.' }, 
-      { title: 'eat', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab nam architecto odit beatae rerum nesciunt maiores eligendi, perferendis velit eum quo cumque officia! Fuga saepe, enim vel excepturi molestias fugit.' },
-      { title: 'drink', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab nam architecto odit beatae rerum nesciunt maiores eligendi, perferendis velit eum quo cumque officia! Fuga saepe, enim vel excepturi molestias fugit.' },
-      { title: 'explore', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab nam architecto odit beatae rerum nesciunt maiores eligendi, perferendis velit eum quo cumque officia! Fuga saepe, enim vel excepturi molestias fugit.' }
+    @navLinks = [{ title: 'stay', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab nam architecto odit beatae rerum nesciunt maiores eligendi, perferendis velit eum quo cumque officia! Fuga saepe, enim vel excepturi molestias fugit.', image: '/assets/stay.jpg' }, 
+      { title: 'eat', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab nam architecto odit beatae rerum nesciunt maiores eligendi, perferendis velit eum quo cumque officia! Fuga saepe, enim vel excepturi molestias fugit.', image: '/assets/eat.jpg' },
+      { title: 'drink', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab nam architecto odit beatae rerum nesciunt maiores eligendi, perferendis velit eum quo cumque officia! Fuga saepe, enim vel excepturi molestias fugit.', image: '/assets/drink.jpg' },
+      { title: 'explore', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab nam architecto odit beatae rerum nesciunt maiores eligendi, perferendis velit eum quo cumque officia! Fuga saepe, enim vel excepturi molestias fugit.', image: '/assets/explore.jpg' }
     ]
     @options = [{ title: 'Check-In', date: '10/10/12' }, { title: 'Check-Out', date: '10/10/12' }, { title: 'Adults', date: '1 Adult' }, { title: 'Children', date: '0 Children' }]
   end

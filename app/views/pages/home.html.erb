@@ -9,7 +9,7 @@
       <div class="carousel-item <%= 'active' if i == 0 %>">
         <img class="d-block w-100 vh-100 carousel-image img-fluid" src="/assets/<%= t[:image] %>.jpg" alt="Slide <%= i + 1 %>">
         <div class="carousel-caption">
-          <h5 class="display-1"><%= t[:title] %></h5>
+          <h5 class="display-1 display-title"><%= t[:title] %></h5>
         </div>
       </div>
     <% end %>
@@ -26,18 +26,19 @@
   <button class="btn-danger text-light text-uppercase font-weight-bold d-flex justify-content-center title text-s">Check Availability</button>
 </div>
 
-<div class="about d-flex flex-column text-center justify-content-around">
+<div class="d-flex flex-column text-center justify-content-around about">
   <h1 class="font-weight-bold mb-4 title-xs title">ABOUT IMPALA</h1>
   <p class="text-s text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias delectus possimus necessitatibus debitis, repellat, natus voluptate a at, dolore animi nesciunt accusamus enim dignissimos? Repellat deleniti vel pariatur tempore.</p>
   <div class="underline"></div>
 </div>
 
-<div class="link-options container">
+<div class="container page-links mx-auto">
   <% @navLinks.each do |t| %>
-    <div class="link-wraper">
-      <div class="<%= t[:title] %>-image link-option display-3">
-        <%= t[:title] %>
-        <p class="link-description text text-xs text-light"><%= t[:description] %></p>
+    <div class="page-link-wraper">
+      <div class="text-center px-5 page-link">
+        <img class="page-link-img" src="<%= t[:image] %>" alt="<%= t[:image] %> image">
+        <p class="display-3 display-title link-title"><%= t[:title] %></p>
+        <p class="text-light text text-xs link-description"><%= t[:description] %></p>
       </div>
     </div>
   <% end %>
@@ -51,15 +52,15 @@
   <img class="map-image" src="/assets/africa.png" alt="">
 </div> %>
 
-<div class="blogs container">
-  <p class="title title-xxs text-uppercase font-weight-bold">Blogs and news</p>
+<div class="blogs-container container">
+  <p class="text-uppercase font-weight-bold title title-xxs blog-title">Blogs and news</p>
   <div class="underline"></div>
-  <div class="slick row">
+  <div class="slick">
     <% @blogs.each do |b| %>
       <div class="blog">
         <img src="/assets/<%= b[:image] %>.jpg" alt="" class="blog-image" >
-        <h2 class="blog-title title text-xs mt-3"><%= b[:title] %></h2>
-        <p class="blog-info text text-xxs mt-4"><%= b[:source] %></p>
+        <h2 class="blog-title title text-xs"><%= b[:title] %></h2>
+        <p class="blog-info text text-xxs"><%= b[:source] %></p>
       </div>
     <% end %>
   </div>
