@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  arrival_date: MyString
+  arrival_time: MyString
+  nights: 1
+  guests: 1
+  full_name: MyString
+
+two:
+  arrival_date: MyString
+  arrival_time: MyString
+  nights: 1
+  guests: 1
+  full_name: MyString

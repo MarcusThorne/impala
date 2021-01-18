@@ -1,0 +1,16 @@
+<h1>Availability Page</h1>
+
+<div class="availability-calendar container">
+  <%= month_calendar do |date| %>
+    <%= date %>
+    <%= guests = 0 %>
+    <% @bookings.each do |b| %>
+      <% if date >= b.check_in && date < b.check_out %>
+        <% guests += b.guests %>
+      <% end %>
+    <% end %>
+    <% text = ' Beds available' if guests < 60 %>
+    <p><%= guests >= 60 ? 'Fully Booked' : 60 - guests %><%= text %></p>
+  <% end %>
+</div>
+

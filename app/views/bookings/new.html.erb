@@ -1,0 +1,30 @@
+<img class="d-block w-100 vh-50 img-fluid" src="/assets/sunbeds.jpg" style="object-fit: cover; height: 800px;">
+
+<%= form_for @booking do |f| %>
+  <div class="form-inputs container m-auto">
+    <%= f.label :full_name %>     
+    <%= f.text_field :full_name,
+            required: true %>
+    <%= f.label :email %>     
+    <%= f.text_field :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" }%>
+    <%= f.label :Check_In %>            
+    <%= f.date_field :check_in,
+                required: true %>
+    <%= f.label :Check_out %>               
+    <%= f.date_field :check_out,
+                required: true %>
+    <%= f.label :time_of_arrival %>
+    <%= f.number_field :arrival_time,
+                required: true %>                    
+    <%= f.label :guests %>
+    <%= f.number_field :guests,
+                required: true %>               
+  </div>
+
+  <div class="form-actions d-flex justify-content-center">
+    <%= f.submit "Book", class: "btn btn-danger form_event_button"%>
+  </div>
+<% end %>

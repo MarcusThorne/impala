@@ -23,7 +23,9 @@
       <h2 class="title text-xl"><%= o[:date] %></h2>
     </div>
   <% end %>
-  <button class="btn-danger text-light text-uppercase font-weight-bold d-flex justify-content-center title text-s">Check Availability</button>
+  <%= link_to bookings_path do %>
+    <button class="btn-danger text-light text-uppercase font-weight-bold d-flex justify-content-center title text-s">Check Availability</button>
+  <% end %>
 </div>
 
 <div class="d-flex flex-column text-center justify-content-around about">
@@ -44,18 +46,10 @@
   <% end %>
 </div>
 
-<%# <div class="map-container">
-  <div class="map-background"></div>
-  <div class="bg-white">
-    <p class="font-weight-bold mb-4 title-xs title text-uppercase">Our Location</p>
-  </div>
-  <img class="map-image" src="/assets/africa.png" alt="">
-</div> %>
-
 <div class="blogs-container container">
   <p class="text-uppercase font-weight-bold title title-xxs blog-title">Blogs and news</p>
   <div class="underline"></div>
-  <div class="slick">
+  <div class="slider">
     <% @blogs.each do |b| %>
       <div class="blog">
         <img src="/assets/<%= b[:image] %>.jpg" alt="" class="blog-image" >
@@ -67,7 +61,6 @@
   <p class="next-prev next"><i class="fas fa-chevron-right"></i></p>
   <p class="next-prev prev"><i class="fas fa-chevron-left"></i></p>
 </div>
-
 
 <div class="newsletter text-center mb-5">
   <div class="newsletter-content">

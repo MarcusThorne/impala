@@ -24,3 +24,6 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   changeNavbar();
 });
+
+// $(document).on('turbolinks:load', function() {
+// });

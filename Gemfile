@@ -60,3 +60,5 @@ gem 'cloudinary', '~> 1.12.0'
 gem 'pg_search', '~> 2.3.0'
 # allows you to parse css
 gem 'autoprefixer-rails' 
+# Simple Calendar
+gem "simple_calendar", "~> 2.0"
