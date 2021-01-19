@@ -14,7 +14,6 @@
 .availability button {
   padding: 16px 40px;
   margin: 40px auto;
-  width: 92vw;
 }
 
 @media(min-width: 768px) {
@@ -30,9 +29,8 @@
     visibility: visible;
   }
 
-  .availability button {
+  .availability a {
     grid-column: 2/4;
-    width: auto;
   }
 }
 

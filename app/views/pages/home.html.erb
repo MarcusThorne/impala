@@ -34,12 +34,12 @@
   <div class="underline"></div>
 </div>
 
-<div class="container-fluid page-links mx-auto" style="padding: 0 160px">
+<div class="container-fluid page-links">
   <% @navLinks.each do |t| %>
     <div class="page-link-wraper">
-      <div class="text-center px-5 page-link">
+      <div class="text-center page-link">
         <img class="page-link-img" src="<%= t[:image] %>" alt="<%= t[:image] %> image">
-        <p class="display-3 display-title link-title"><%= t[:title] %></p>
+        <p class="display-4 display-title link-title"><%= t[:title] %></p>
         <p class="text-light text text-xs link-description"><%= t[:description] %></p>
       </div>
     </div>
@@ -61,8 +61,10 @@
       </div>
     <% end %>
   </div>
-  <p class="next-prev next"><i class="fas fa-chevron-right"></i></p>
-  <p class="next-prev prev"><i class="fas fa-chevron-left"></i></p>
+  <div class="d-flex justify-content-center mt-5">
+    <p class="next-prev prev mx-4"><i class="fas fa-chevron-left"></i></p>
+    <p class="next-prev next mx-4"><i class="fas fa-chevron-right"></i></p>
+  </div>
 </div>
 
 <div class="newsletter text-center mb-5">

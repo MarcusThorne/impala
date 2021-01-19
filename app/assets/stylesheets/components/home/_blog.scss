@@ -1,5 +1,5 @@
 .blogs-container .blog {
-  margin: 0 16px !important;
+  margin: 0 8px !important;
 }
 
 .blog-underline {
@@ -10,9 +10,9 @@
 }
 
 .blogs-container {
-  margin: 0 120px;
+  margin: 0;
   position: relative;
-  padding: 0 120px !important;
+  max-width: 400px;
 }
 
 .blogs-container .blog .blog-image {
@@ -22,42 +22,24 @@
 }
 
 .next-prev {
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.75);
   text-align: center;
   visibility: hidden;
   display: none;
-  width: 320px;
-  height: 304px;
-  padding-top: 15%;
   justify-content: center;
-  top: 119px;
   transition: .5s;
-
-  i {
-    transition: .5s;
-    transform: translate(-20%, -10%);
-  }
-
-  &:hover i {
-    transform: scale(1.5);
-  }
-}
-
-.next {
-  right: 117px;
-  padding-right: 24px;
-}
-
-.prev {
-  left: 117px;
-  padding-left: 24px;
+  color: #a8a8a8;
 }
 
 .blogs-container .underline {
   width: 120px;
   border-bottom: 4px solid red;
   margin-bottom: 40px;
+}
+
+@media(min-width: 550px) {
+  .blogs-container {
+    max-width: none;
+  }
 }
 
 @media(min-width: 768px) {
@@ -67,15 +49,8 @@
   }
 }
 
-@media(min-width: 1024px) {
-  .next-prev {
-    height: 376px;
-    max-height: 330px;
-  }
-}
-
 @media(min-width: 1200px) {
-  .next-prev {
-    padding-top: 9%;
+  .blogs-container {
+    padding: 0 120px !important;
   }
 }

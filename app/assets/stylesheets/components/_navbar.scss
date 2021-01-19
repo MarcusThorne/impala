@@ -10,7 +10,7 @@
   display: none;
   visibility: hidden;
   transition: .5s;
-  margin-left: -80px;
+  margin-left: -32px;
 }
 
 .navbar-container .navbar-collapse {
@@ -62,9 +62,9 @@
   }
 }
 
-@media(min-width: 992px) {
+@media(min-width: 768px) {
   .navbar-container .navbar-brand img {
-    width: 184px;
+    width: 136px;
   }
 
   .navbar-container.scrolling-active img {
@@ -76,7 +76,11 @@
     visibility: visible;
   }
 
+  .navbar-container {
+    padding: auto 8px !important;
+  }
+
   .navbar-container.scrolling-active {
-    padding: 12px 64px !important;
+    padding: 12px 8px !important;
   }
 }

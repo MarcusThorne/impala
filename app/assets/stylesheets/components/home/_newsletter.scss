@@ -1,7 +1,7 @@
 .newsletter {
   margin: 32px auto;
   max-width: 280px;
-  margin-top: 200px !important;
+  margin-top: 136px !important;
 }
 
 .newsletter .newsletter-input input {
@@ -21,10 +21,8 @@
 
 @media(min-width: 768px) {
   .newsletter {
-    border: 1px solid lightgray;
     max-width: 1000px;
     margin: 32px auto;
-    padding: 64px 40px;
   }
 
   .newsletter-content {

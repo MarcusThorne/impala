@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def index
     @bookings = Booking.all
+    @options = [{ title: 'Check-In', date: '10/10/12' }, { title: 'Check-Out', date: '10/10/12' }, { title: 'Adults', date: '1 Adult' }, { title: 'Children', date: '0 Children' }]
   end
 
   def new
