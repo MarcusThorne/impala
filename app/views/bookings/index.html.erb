@@ -1,4 +1,12 @@
 <h1>Availability Page</h1>
+<div class="banner bg-dark">
+  <img class="img-fluid" src="/assets/sunbeds.jpg" alt="" style="max-height: 75vh; min-width: 100vw; object-fit: cover; opacity: 0.7;">
+</div>
+
+<div class="container bg-white border" style="height: 160px; width: 100%; margin-top: -40px; z-index: 5;">
+</div>
+
+
 
 <div class="availability-calendar container">
   <%= month_calendar do |date| %>
@@ -13,4 +21,3 @@
     <p><%= guests >= 60 ? 'Fully Booked' : 60 - guests %><%= text %></p>
   <% end %>
 </div>
-
