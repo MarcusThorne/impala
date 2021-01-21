@@ -1,0 +1,33 @@
+<h1>Availability Page</h1>
+<div class="banner bg-dark" style="position: relative;">
+  <img class="img-fluid" src="/assets/sunbeds.jpg" alt="" style="max-height: 75vh; min-width: 100vw; object-fit: cover; opacity: 0.7;">
+</div>
+
+<%# <form class="search-bar">
+  <i class="fas fa-search search-icon"></i>
+  <input name="query" type="search" aria-label="Search" placeholder="Find a helperr..." class="search-input">
+  <button class="btn btn-primary search-submit" type="submit">Search</button>
+</form> %>
+
+<form class="container bg-white border d-flex justify-content-between">
+  <p class="text text-s">Check-in</p>
+  <input name="check_in" type="date" aria-label="Search" >
+  <p class="text text-s">Check-out</p>
+  <input name="check_out" type="date" aria-label="Search" >
+  <p class="text text-s">Guests</p>
+  <input name="guests" type="number" aria-label="Search" >
+  <button class="btn btn-primary search-submit" type="submit"><i class="fas fa-search"></i></button>
+</form>
+
+<div class="container" style="margin-top: 400px; padding: 0 200px;">
+  <div class="row">
+    <% @rooms.each do |room| %>
+      <div class="col-sm border bg-dark my-5" style="height: 200px; width: 200px">
+        <%= room.beds %>
+        <%= room.private_bathroom %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'book', new_booking_path %>
