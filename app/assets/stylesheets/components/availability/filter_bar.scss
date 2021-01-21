@@ -1,0 +1,29 @@
+.filter-bar {
+  width: 280px;
+  margin: 0 auto;
+  margin-top: -40px;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+}
+
+.filter-bar .filter-underline {
+  width: 60px;
+  border-bottom: 3px solid red;
+}
+
+.filter-bar p {
+  margin: 8px 0 0 0;
+}
+
+.filter-bar input {
+  border: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-bar button {
+  margin-top: 16px;
+}

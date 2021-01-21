@@ -1,33 +1,43 @@
 <h1>Availability Page</h1>
-<div class="banner bg-dark" style="position: relative;">
-  <img class="img-fluid" src="/assets/sunbeds.jpg" alt="" style="max-height: 75vh; min-width: 100vw; object-fit: cover; opacity: 0.7;">
+<div class="banner bg-dark">
+  <img class="img-fluid" src="/assets/sunbeds.jpg" alt="" >
+  <div class="banner-text">
+    <h5 class="banner-title display-3 display-title">Stay With Us</h5>
+  </div>
 </div>
 
-<%# <form class="search-bar">
-  <i class="fas fa-search search-icon"></i>
-  <input name="query" type="search" aria-label="Search" placeholder="Find a helperr..." class="search-input">
-  <button class="btn btn-primary search-submit" type="submit">Search</button>
-</form> %>
-
-<form class="container bg-white border d-flex justify-content-between">
+<form class="filter-bar">
+  <p class="title text-m">Find available rooms</p>
+  <div class="filter-underline"></div>
   <p class="text text-s">Check-in</p>
   <input name="check_in" type="date" aria-label="Search" >
   <p class="text text-s">Check-out</p>
   <input name="check_out" type="date" aria-label="Search" >
   <p class="text text-s">Guests</p>
-  <input name="guests" type="number" aria-label="Search" >
+  <input name='guests' aria-label="Search" list="numbers">
+  <datalist id="numbers">
+    <% number = 1 %>
+    <% 8.times do %>
+      <option value="<%= number %>">
+      <% number += 1 %>
+    <% end %>
+  </datalist>
   <button class="btn btn-primary search-submit" type="submit"><i class="fas fa-search"></i></button>
 </form>
 
-<div class="container" style="margin-top: 400px; padding: 0 200px;">
-  <div class="row">
-    <% @rooms.each do |room| %>
-      <div class="col-sm border bg-dark my-5" style="height: 200px; width: 200px">
-        <%= room.beds %>
-        <%= room.private_bathroom %>
-      </div>
-    <% end %>
-  </div>
+<div class="mx-auto container-fluid mt-5">
+  <% @allRooms.each do |r| %>
+    <div class="d-flex slider">
+      <% r.each do |room| %>
+        <div class="d-flex flex-column m-2 card <%= room.name.gsub(' ', '-').downcase %>">
+          <img src="/assets/rooms/<%= room.name.gsub(' ', '-').downcase %>.jpg" alt="" style="height: 250px; width: 100%; object-fit: cover">
+          <div class="card-body">
+            <h5 class="card-title"><%= room.name %> <%= room.room_number %></h5>
+            <p class="card-text">Floor <%= room.floor %>. <%= 'Private Bathroom' if room.private_bathroom = true %></p>
+            <a href="" class="btn btn-danger">Book Room</a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 </div>
-
-<%= link_to 'book', new_booking_path %>
