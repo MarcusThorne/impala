@@ -18,12 +18,11 @@ require("channels")
 // External imports
 import 'bootstrap';
 import { changeNavbar } from '../components/changeNavbar';
+import { selectedRoom } from '../components/selectedRoom';
 
 // Internal imports
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   changeNavbar();
+  selectedRoom();
 });
-
-// $(document).on('turbolinks:load', function() {
-// });

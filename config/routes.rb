@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :bookings
+  resources :rooms
+  resources :availabilities
+
+  get 'search/:query', to: 'availabilities#search'
 end

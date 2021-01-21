@@ -1,15 +1,12 @@
 class BookingsController < ApplicationController
-  def index
-    @bookings = Booking.all
-    @options = [{ title: 'Check-In', date: '10/10/12' }, { title: 'Check-Out', date: '10/10/12' }, { title: 'Adults', date: '1 Adult' }, { title: 'Children', date: '0 Children' }]
-  end
-
   def new
     @booking = Booking.new
+    @rooms = Room.all
   end
 
   def create
     @booking = Booking.new(booking_params)
+    @rooms = Room.all
     if @booking.save
       redirect_to root_path
     else
@@ -24,7 +21,6 @@ class BookingsController < ApplicationController
   end
 
   def show
-   
   end
 
   def destroy
@@ -33,6 +29,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:full_name, :email, :check_in, :check_out, :guests, :arrival_time)
+    params.require(:booking).permit(:full_name, :email, :check_in, :check_out, :guests, :arrival_time, :room_id)
   end
 end

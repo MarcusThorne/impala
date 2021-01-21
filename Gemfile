@@ -62,3 +62,5 @@ gem 'pg_search', '~> 2.3.0'
 gem 'autoprefixer-rails' 
 # Simple Calendar
 gem "simple_calendar", "~> 2.0"
+# for generating fake data
+gem 'faker'
