@@ -1,4 +1,3 @@
-<h1>Availability Page</h1>
 <div class="banner bg-dark">
   <img class="img-fluid" src="/assets/sunbeds.jpg" alt="" >
   <div class="banner-text">
@@ -10,11 +9,11 @@
   <p class="title text-m">Find available rooms</p>
   <div class="filter-underline"></div>
   <p class="text text-s">Check-in</p>
-  <input name="check_in" type="date" aria-label="Search" >
+  <input name="check_in" type="date" aria-label="Search" value="<%= Date.today %>">
   <p class="text text-s">Check-out</p>
-  <input name="check_out" type="date" aria-label="Search" >
+  <input name="check_out" type="date" aria-label="Search" value="<%= Date.tomorrow %>">
   <p class="text text-s">Guests</p>
-  <input name='guests' aria-label="Search" list="numbers">
+  <input name='guests' aria-label="Search" list="numbers" placeholder="1">
   <datalist id="numbers">
     <% number = 1 %>
     <% 8.times do %>
@@ -26,11 +25,12 @@
 </form>
 
 <div class="mx-auto container-fluid mt-5">
-  <% @allRooms.each do |r| %>
+  <% @allRooms.each_with_index do |r, i| %>
+    <p class="title title-s room-titles"><%= if i = 0 then "Private Room's" elsif i = 1 then "2 Bed Dorm's" elsif i = 2 then "4 Bed Dorm's" elsif i = 3 then "8 Bed Dorm's" end  %></p>
     <div class="d-flex slider">
       <% r.each do |room| %>
-        <div class="d-flex flex-column m-2 card <%= room.name.gsub(' ', '-').downcase %>">
-          <img src="/assets/rooms/<%= room.name.gsub(' ', '-').downcase %>.jpg" alt="" style="height: 250px; width: 100%; object-fit: cover">
+        <div class="d-flex flex-column bg-light mx-2 room-card <%= room.name.gsub(' ', '-').downcase %>">
+          <img src="/assets/rooms/<%= room.name.gsub(' ', '-').downcase %>.jpg" alt="">
           <div class="card-body">
             <h5 class="card-title"><%= room.name %> <%= room.room_number %></h5>
             <p class="card-text">Floor <%= room.floor %>. <%= 'Private Bathroom' if room.private_bathroom = true %></p>

@@ -1,14 +1,37 @@
 .carousel {
   margin-top: 176px;
+  height: 80vh;
 }
 
-.carousel-caption {
-  bottom: 40% !important;
+.carousel-text {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  text-align: center;
 }
 
 .carousel-image {
-  opacity: 0.6;
+  opacity: 0.4;
   object-fit: cover;
+  height: 76vh !important;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.carousel-image-room {
+  background-image: url("/assets/room.jpg");
+}
+
+.carousel-image-bar {
+  background-image: url("/assets/bar.jpg");
+}
+
+.carousel-image-building {
+  background-image: url("/assets/building.jpg");
 }
 
 @media(max-width: 425px) {

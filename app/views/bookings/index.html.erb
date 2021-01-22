@@ -1,0 +1,27 @@
+<h1>Availability Page</h1>
+<div class="banner bg-dark" style="position: relative;">
+  <img class="img-fluid" src="/assets/sunbeds.jpg" alt="" style="max-height: 75vh; min-width: 100vw; object-fit: cover; opacity: 0.7;">
+  <div class="container bg-white border d-flex justify-content-between" style="padding: 0; height: 160px; width: 100%; margin-top: -40px; z-index: 5; position: absolute; bottom: -192px; transform: translate(-50%, -50%); left: 50%;">
+    <% @options.each do |o| %>
+      <div class="option my-auto mx-5">
+        <h6 class="text text-xxs"><%= o[:title] %></h6>
+        <h2 class="title text-xxl text-uppercase"><%= o[:date] %></h2>
+      </div>
+    <% end %>
+    <button class="btn-danger" style="width: 40px; height: 100%;"><i class="fas fa-search"></i></button>
+  </div>
+</div>
+
+<div class="availability-calendar container">
+  <%= month_calendar do |date| %>
+    <%= date %>
+    <%= guests = 0 %>
+    <% @bookings.each do |b| %>
+      <% if date >= b.check_in && date < b.check_out %>
+        <% guests += b.guests %>
+      <% end %>
+    <% end %>
+    <% text = ' Beds available' if guests < 60 %>
+    <p><%= guests >= 60 ? 'Fully Booked' : 60 - guests %><%= text %></p>
+  <% end %>
+</div>

@@ -2,6 +2,7 @@
   display: grid;
   margin-bottom: 120px;
   grid-gap: 24px;
+  max-width: 760px;
 }
 
 .page-links .page-link-wraper {
@@ -15,16 +16,6 @@
   position: relative;
   transition: .5s;
   min-height: 304px;
-
-  &:hover {
-    .page-link-img {
-      opacity: 0.35;
-    }
-
-    .link-description {
-      visibility: visible;
-    }
-  }
 }
 
 .page-links .page-link-wraper .page-link .page-link-img {
@@ -48,6 +39,7 @@
 .page-links .page-link-wraper .page-link .link-description {
   visibility: hidden;
   transition: .1s;
+  margin-top: 80%;
 }
 
 @media(min-width: 425px) {
@@ -62,9 +54,19 @@
   }
 }
 
-@media(min-width: 1200px) {
+@media(min-width: 1024px) {
   .page-links .page-link-wraper .page-link {
     min-height: 440px;
+
+    &:hover {
+      .page-link-img {
+        opacity: 0.6;
+      }
+
+      .link-description {
+        visibility: visible;
+      }
+    }
   }
 
   .page-links .page-link-wraper .page-link .link-title {
@@ -73,5 +75,6 @@
 
   .page-links {
     padding: 0 104px !important;
+    max-width: 1400px;
   }
 }

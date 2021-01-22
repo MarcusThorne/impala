@@ -1,14 +1,15 @@
 // Import your components CSS files here.
 @import "alert";
 @import "navbar";
+@import "titles";
+@import "text";
+@import "banner";
 @import "home/carousel";
 @import "home/availability";
 @import "home/about";
 @import "home/newsletter";
 @import "home/blog";
-@import "titles";
-@import "text";
 @import "home/page_links";
 @import "bookings/current_bookings";
 @import "availability/filter_bar";
-@import "banner";
+@import "availability/room_card";

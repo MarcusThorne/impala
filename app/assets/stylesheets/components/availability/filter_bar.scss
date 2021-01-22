@@ -4,10 +4,10 @@
   margin-top: -40px;
   background-color: whitesmoke;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
   display: flex;
   flex-direction: column;
   padding: 24px 16px;
+  font-size: 18px;
 }
 
 .filter-bar .filter-underline {
@@ -21,7 +21,7 @@
 
 .filter-bar input {
   border: none;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  background-color: inherit;
 }
 
 .filter-bar button {
