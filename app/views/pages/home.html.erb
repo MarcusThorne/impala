@@ -41,7 +41,7 @@
   <div class="slider">
     <% @blogs.each do |b| %>
       <div class="blog border">
-        <img src="/assets/<%= b[:photo] %>.jpg" alt="" class="blog-image" >
+        <%= cl_image_tag b.photo.key %>
         <div class="p-2">
           <h5 class="blog-title"><%= b[:title] %></h5>
           <p class="blog-info"><%= b[:source] %></p>

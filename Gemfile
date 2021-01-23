@@ -56,7 +56,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Added gems
 gem 'simple_form'
 gem 'font-awesome-sass', '~> 5.12.0'
-gem 'cloudinary', '~> 1.12.0'
+# For image uploads and storing
+gem 'cloudinary', '~> 1.16.0'
 gem 'pg_search', '~> 2.3.0'
 # allows you to parse css
 gem 'autoprefixer-rails' 
