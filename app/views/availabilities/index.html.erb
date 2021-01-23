@@ -1,18 +1,18 @@
 <div class="banner bg-dark">
-  <img class="img-fluid" src="/assets/sunbeds.jpg" alt="" >
+  <div class="banner-img" style="background-image: url('/assets/sunbeds.jpg');"></div>
   <div class="banner-text">
-    <h5 class="banner-title display-3 display-title">Stay With Us</h5>
+    <p class="banner-title display-3 display-title text-light text-uppercase">Stay With Us</p>
   </div>
 </div>
 
 <form class="filter-bar">
-  <p class="title text-m">Find available rooms</p>
+  <p>Find available rooms</p>
   <div class="filter-underline"></div>
-  <p class="text text-s">Check-in</p>
+  <p>Check-in</p>
   <input name="check_in" type="date" aria-label="Search" value="<%= Date.today %>">
-  <p class="text text-s">Check-out</p>
+  <p>Check-out</p>
   <input name="check_out" type="date" aria-label="Search" value="<%= Date.tomorrow %>">
-  <p class="text text-s">Guests</p>
+  <p>Guests</p>
   <input name='guests' aria-label="Search" list="numbers" placeholder="1">
   <datalist id="numbers">
     <% number = 1 %>
@@ -26,7 +26,7 @@
 
 <div class="mx-auto container-fluid mt-5">
   <% @allRooms.each_with_index do |r, i| %>
-    <p class="title title-s room-titles"><%= if i = 0 then "Private Room's" elsif i = 1 then "2 Bed Dorm's" elsif i = 2 then "4 Bed Dorm's" elsif i = 3 then "8 Bed Dorm's" end  %></p>
+    <p class="room-titles"><%= if i = 0 then "Private Room's" elsif i = 1 then "2 Bed Dorm's" elsif i = 2 then "4 Bed Dorm's" elsif i = 3 then "8 Bed Dorm's" end  %></p>
     <div class="d-flex slider">
       <% r.each do |room| %>
         <div class="d-flex flex-column bg-light mx-2 room-card <%= room.name.gsub(' ', '-').downcase %>">

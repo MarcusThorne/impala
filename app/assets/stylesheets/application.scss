@@ -13,6 +13,20 @@
 @import "components/index";
 @import "pages/index";
 
-body {
-  color: rgb(73, 73, 73);
+a {
+  color:#585858 !important;
+
+  &:hover {
+    color: #202020 !important;
+  }
+}
+
+p {
+  color: #585858 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #3f3f3f !important;
 }

@@ -1,14 +1,16 @@
 .banner {
   height: 75vh;
   position: relative;
-  margin-top: 80px;
-  z-index: -1;
+  overflow: hidden;
 }
 
-.banner img {
+.banner .banner-img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  opacity: 0.4;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .banner .banner-title {
@@ -17,5 +19,4 @@
   top: 50%;
   left: 50%;
   text-align: center;
-  text-shadow: 2px 2px black;
 }

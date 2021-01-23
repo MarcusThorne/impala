@@ -8,27 +8,33 @@
     <% @titles.each_with_index do |t, i| %>
       <div class="carousel-item bg-dark <%= 'active' if i == 0 %>">
         <div class="carousel-image carousel-image-<%= t[:image] %>" alt="Slide <%= i + 1 %>"></div>
-        <h5 class="carousel-text display-3 display-title"><%= t[:title] %></h5>
+        <h5 class="carousel-text display-3 text-light"><%= t[:title] %></h5>
       </div>
     <% end %>
   </div>
 </div>
 
-<div class="availability">
-  <% @options.each do |o| %>
-    <div class="option">
-      <h6 class="text text-xxs"><%= o[:title] %></h6>
-      <h2 class="title text-xxl text-uppercase"><%= o[:date] %></h2>
+<div class="availability border-bottom">
+  <%= form_tag availabilities_path, method: 'get', class: 'availability-form justify-content-around align-items-center' do %>
+    <div class="form-field">
+      <p>Check In</p>
+      <h2><%= date_field_tag :check_in, Date.today, class: 'font-weight-bold', style: 'width: 260px; border: none;' %></h2>
     </div>
-  <% end %>
-  <%= link_to availabilities_path do %>
-    <button class="btn-danger text-light text-uppercase font-weight-bold d-flex justify-content-center title text-s">Check Availability</button>
+    <div class="form-field">
+      <p>Check Out</p>
+      <h2><%= date_field_tag :check_out, Date.tomorrow, class: 'font-weight-bold', style: 'width: 260px; border: none;' %></h2>
+    </div>
+    <div class="form-field">
+      <p>Guests</p>
+      <h2><%= select_tag :guests, options_for_select(['1 Guest', '2 Guests', '3 Guests', '4 Guests', '5 Guests', '6 Guests', '7 Guests', '8 Guests']), class: 'font-weight-bold', style: 'border: none;' %></h2>
+    </div>
+    <h5><%= submit_tag('Check Availability', name: nil, class: "form-button btn-danger text-light text-uppercase font-weight-bold mx-auto") %></h5>
   <% end %>
 </div>
 
 <div class="d-flex flex-column text-center justify-content-around about">
-  <h1 class="font-weight-bold mb-4 title-xs title">ABOUT IMPALA</h1>
-  <p class="text-s text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias delectus possimus necessitatibus debitis, repellat, natus voluptate a at, dolore animi nesciunt accusamus enim dignissimos? Repellat deleniti vel pariatur tempore.</p>
+  <h1 class="font-weight-bold mb-4">ABOUT IMPALA</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias delectus possimus necessitatibus debitis, repellat, natus voluptate a at, dolore animi nesciunt accusamus enim dignissimos? Repellat deleniti vel pariatur tempore.</p>
   <div class="underline"></div>
 </div>
 
@@ -37,8 +43,8 @@
     <div class="page-link-wraper">
       <div class="text-center page-link">
         <img class="page-link-img" src="<%= t[:image] %>" alt="<%= t[:image] %> image">
-        <p class="display-4 display-title link-title"><%= t[:title] %></p>
-        <p class="text-light text text-xs link-description"><%= t[:description] %></p>
+        <h1 class="display-4 link-title text-light"><%= t[:title] %></h1>
+        <p class="text-light link-description text-light"><%= t[:description] %></p>
       </div>
     </div>
   <% end %>
@@ -46,15 +52,15 @@
 
 <div class="container-fluid" style="height: 304px; background-color: #f2efeb; margin-bottom: -200px;"></div>
 <div class="blogs-container container-fluid">
-  <p class="text-uppercase font-weight-bold title title-xxs blog-title container">Blogs and news</p>
-  <div class="container"><p class="blog-underline"></p></div>
+  <h1 class="text-uppercase font-weight-bold blog-title container">Blogs and news</h1>
+  <div class="container" style="margin-bottom: 40px"><p class="blog-underline"></p></div>
   <div class="slider">
     <% @blogs.each do |b| %>
       <div class="blog border">
         <img src="/assets/<%= b[:image] %>.jpg" alt="" class="blog-image" >
         <div class="p-2">
-          <h2 class="blog-title title text-xs"><%= b[:title] %></h2>
-          <p class="blog-info text text-xxs"><%= b[:source] %></p>
+          <h5 class="blog-title"><%= b[:title] %></h5>
+          <p class="blog-info"><%= b[:source] %></p>
         </div>
       </div>
     <% end %>
@@ -67,11 +73,11 @@
 
 <div class="newsletter text-center mb-5">
   <div class="newsletter-content">
-    <h1 class="display-5 font-weight-bold mb-3 title title-l" style="font-family: 'Volkhov', serif;">Impala Newsletter</h1>
-    <p class="mb-4 text text-xxs fw-lighter">Quos nostrum quibusdam nihil tempora numquam eligendi mollitia vero necessitatibus consequuntur saepe?</p>
+    <h1 class="display-5 font-weight-bold mb-3" style="font-family: 'Volkhov', serif;">Impala Newsletter</h1>
+    <p class="mb-4 fw-lighter">Quos nostrum quibusdam nihil tempora numquam eligendi mollitia vero necessitatibus consequuntur saepe?</p>
     <div class="newsletter-input input-group mb-3">
-      <input type="text" class="form-control text-m" placeholder="Email Address" aria-label="Email Address" aria-describedby="button-addon2">
-      <button class="btn btn-outline-secondary title text-m" type="button" id="button-addon2">Sign Up</button>
+      <input type="text" class="form-control" placeholder="Email Address" aria-label="Email Address" aria-describedby="button-addon2">
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Sign Up</button>
     </div>
   </div>
 </div>

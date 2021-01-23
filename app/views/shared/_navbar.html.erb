@@ -1,33 +1,32 @@
+<!-- A div to keep page items from going underneith the navbar -->
+<div class="navbar-placeholder"></div>
+
 <!-- Navbar content exclusing drop down menu -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top font-weight-bold fs-4 navbar-container">
-  <div class="container-fluid justify-content-">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top font-weight-bold fs-4">
+  <div class="container-fluid">
     <%= link_to root_path, class:'navbar-brand' do %>
       <img src="/assets/logo.png" alt="">
     <% end %>
-    <div class="justify-content-center font-weight-bold navbar-center">
+    <div class="nav-links justify-content-center font-weight-bold">
       <% @navLinks.each do |n| %>
-        <a class="nav-link mx-1 text-uppercase title text-xxxs" href=""><%= n[:title] %></a>
+        <a class="nav-link text-uppercase mx-1" href=""><%= n[:title] %></a>
       <% end %>
     </div>
-    <div>
-      <%= link_to 'BOOK NOW', new_booking_path, class:'text-danger mr-2 title text-xxs' %>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <div class="d-flex align-items-center">
+      <%= link_to 'BOOK NOW', new_booking_path, class:'text-danger mr-3' %>
+      <i class="navbar-toggler fas fa-bars p-0" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"></i>
     </div>
   </div>
 </nav>
 
 <!-- Drop down menu for mobile -->
-<div class="collapse content-collapsed bg-white" id="navbarToggleExternalContent">
-  <div class="extended-content">
-    <ul class="navbar-collapse container text-end font-weight-bold text-center" id="navbarToggleExternalContent">
-      <% @navLinks.each do |n| %>
-        <a class="nav-link text-dark my-4 text-uppercase title text-xxs" href=""><%= n[:title] %></a>
-        <div class="underline border-bottom"></div>
-      <% end %>
-    </ul>
-  </div>
+<div class="collapse collapse-container bg-white" id="navbarToggleExternalContent">
+  <ul class="collapse-content container text-end font-weight-bold text-center mb-0" id="navbarToggleExternalContent">
+    <% @navLinks.each do |n| %>
+      <a class="nav-link text-dark text-uppercase my-4" href=""><%= n[:title] %></a>
+      <div class="border-bottom"></div>
+    <% end %>
+  </ul>
 </div>
 
 <!-- Button for collapse content on mobile -->
