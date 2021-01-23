@@ -67,3 +67,5 @@ gem "simple_calendar", "~> 2.0"
 gem 'faker'
 # Security .env file
 gem 'dotenv-rails', groups: [:development, :test]
+
+gem "aws-sdk-s3", require: false
