@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   resources :blogs
 
   get 'search/:query', to: 'availabilities#search'
+  get 'sustenance', to: 'pages#home'
+  get 'about_us', to: 'pages#home'
+  get 'contact_us', to: 'pages#home'
 end

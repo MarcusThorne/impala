@@ -16,37 +16,37 @@
 
 <%= render 'shared/availability_form' %>
 
-<div class="d-flex flex-column text-center justify-content-around about">
+<div class="about d-flex flex-column text-center justify-content-around">
   <h1 class="font-weight-bold mb-4">ABOUT IMPALA</h1>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias delectus possimus necessitatibus debitis, repellat, natus voluptate a at, dolore animi nesciunt accusamus enim dignissimos? Repellat deleniti vel pariatur tempore.</p>
   <div class="underline"></div>
 </div>
 
-<div class="container-fluid page-links">
+<div class="page-links container-fluid">
   <% @navLinks.each do |t| %>
-    <div class="page-link-wraper">
-      <div class="text-center page-link">
-        <img class="page-link-img" src="<%= t[:image] %>" alt="<%= t[:image] %> image">
-        <h1 class="display-4 link-title text-light"><%= t[:title] %></h1>
-        <p class="text-light link-description text-light"><%= t[:description] %></p>
+    <%= link_to t[:link], class: 'page-link-wraper' do %>
+      <div class="page-link text-center mx-auto" style="background-image: url('<%= t[:image] %>')">
+        <h1 class="link-content link-title display-4 text-light"><%= t[:title] %></h1>
+        <p class="link-content link-description text-light text-light"><%= t[:description] %></p>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
 
-<div class="container-fluid" style="height: 304px; background-color: #f2efeb; margin-bottom: -200px;"></div>
+<div class="blogs-background container-fluid"></div>
 <div class="blogs-container container-fluid">
-  <h1 class="text-uppercase font-weight-bold blog-title container">Blogs and news</h1>
+  <h1 class="text-uppercase font-weight-bold container">Blogs and news</h1>
   <div class="container" style="margin-bottom: 40px"><p class="blog-underline"></p></div>
   <div class="slider">
     <% @blogs.each do |b| %>
-      <div class="blog border">
-        <%= cl_image_tag b.photo.key %>
-        <div class="p-2">
-          <h5 class="blog-title"><%= b[:title] %></h5>
-          <p class="blog-info"><%= b[:source] %></p>
+      <a href="<%= b[:link] ? b[:link] : '#' %>" class="card p-2 m-2" target="_blank">
+        <%= cl_image_tag b.photo.key, height: 250, width: 300, crop: :fill, class: "card-img-top" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= b[:title] %></h5>
+          <p class="card-text">Sourced from <%= b[:source] %>, </p>
+          <p class="card-text">on the <%= b[:created_at].strftime("%d-%m-%Y") %></p>
         </div>
-      </div>
+      </a>
     <% end %>
   </div>
   <div class="d-flex justify-content-center mt-5">

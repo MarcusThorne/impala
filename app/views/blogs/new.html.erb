@@ -3,6 +3,7 @@
   <%= simple_form_for(@blogs) do |f| %>
     <%= f.input :title, as: :string %>
     <%= f.input :source, as: :string %>
+    <%= f.input :link, as: :string %>
     <%= f.input :photo, as: :file %>
     <%= f.submit %>
   <% end %>

@@ -1,5 +1,7 @@
-.blogs-container .blog {
-  margin: 0 8px !important;
+.blogs-background {
+  height: 304px;
+  background-color: #f2efeb; 
+  margin-bottom: -200px;
 }
 
 .blog-underline {
@@ -15,10 +17,10 @@
   max-width: 400px;
 }
 
-.blogs-container .blog .blog-image {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
+.blogs-container .card {
+  width: 18rem; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  border: none;
 }
 
 .next-prev {
@@ -30,19 +32,11 @@
   color: #a8a8a8;
 }
 
-.blogs-container .underline {
-  width: 120px;
-  border-bottom: 4px solid red;
-  margin-bottom: 40px;
-}
-
 @media(min-width: 550px) {
   .blogs-container {
     max-width: none;
   }
-}
 
-@media(min-width: 768px) {
   .next-prev {
     display: flex;
     visibility: visible;
