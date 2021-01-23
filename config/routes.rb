@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :bookings
   resources :rooms
   resources :availabilities
+  resources :blogs
 
   get 'search/:query', to: 'availabilities#search'
 end

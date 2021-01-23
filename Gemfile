@@ -64,3 +64,5 @@ gem 'autoprefixer-rails'
 gem "simple_calendar", "~> 2.0"
 # for generating fake data
 gem 'faker'
+# Security .env file
+gem 'dotenv-rails', groups: [:development, :test]

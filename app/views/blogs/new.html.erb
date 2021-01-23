@@ -1,0 +1,11 @@
+<div class="w-75 p-5 mx-auto bg-white" style="margin-top: 100px">
+  <%= form_for @blogs do |f| %>
+    <%= f.label 'Blog Title' %>
+    <%= f.text_field :title %>
+    <%= f.label 'Blog Source' %>
+    <%= f.text_field :source %>
+    <%= f.label 'Blog Photo' %>
+    <%= f.file_field :photo %>
+    <%= f.submit "Add Blog", class: "btn btn-danger form_event_button w-50"%>
+  <% end %>
+</div>

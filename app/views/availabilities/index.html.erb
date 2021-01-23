@@ -5,30 +5,13 @@
   </div>
 </div>
 
-<form class="filter-bar">
-  <p>Find available rooms</p>
-  <div class="filter-underline"></div>
-  <p>Check-in</p>
-  <input name="check_in" type="date" aria-label="Search" value="<%= Date.today %>">
-  <p>Check-out</p>
-  <input name="check_out" type="date" aria-label="Search" value="<%= Date.tomorrow %>">
-  <p>Guests</p>
-  <input name='guests' aria-label="Search" list="numbers" placeholder="1">
-  <datalist id="numbers">
-    <% number = 1 %>
-    <% 8.times do %>
-      <option value="<%= number %>">
-      <% number += 1 %>
-    <% end %>
-  </datalist>
-  <button class="btn btn-primary search-submit" type="submit"><i class="fas fa-search"></i></button>
-</form>
+<%= render 'shared/availability_form' %>
 
 <div class="mx-auto container-fluid mt-5">
   <% @allRooms.each_with_index do |r, i| %>
-    <p class="room-titles"><%= if i = 0 then "Private Room's" elsif i = 1 then "2 Bed Dorm's" elsif i = 2 then "4 Bed Dorm's" elsif i = 3 then "8 Bed Dorm's" end  %></p>
-    <div class="d-flex slider">
-      <% r.each do |room| %>
+    <p class="room-titles"><%= r[:title] %></p>
+    <div class="d-flex">
+      <% r[:name].each do |room| %>
         <div class="d-flex flex-column bg-light mx-2 room-card <%= room.name.gsub(' ', '-').downcase %>">
           <img src="/assets/rooms/<%= room.name.gsub(' ', '-').downcase %>.jpg" alt="">
           <div class="card-body">

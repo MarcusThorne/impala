@@ -7,30 +7,14 @@
   <div class="carousel-inner">
     <% @titles.each_with_index do |t, i| %>
       <div class="carousel-item bg-dark <%= 'active' if i == 0 %>">
-        <div class="carousel-image carousel-image-<%= t[:image] %>" alt="Slide <%= i + 1 %>"></div>
+        <div class="carousel-image %>" alt="Slide <%= i + 1 %>" style="background-image: url('/assets/<%= t[:image] %>.jpg')"></div>
         <h5 class="carousel-text display-3 text-light"><%= t[:title] %></h5>
       </div>
     <% end %>
   </div>
 </div>
 
-<div class="availability border-bottom">
-  <%= form_tag availabilities_path, method: 'get', class: 'availability-form justify-content-around align-items-center' do %>
-    <div class="form-field">
-      <p>Check In</p>
-      <h2><%= date_field_tag :check_in, Date.today, class: 'font-weight-bold', style: 'width: 260px; border: none;' %></h2>
-    </div>
-    <div class="form-field">
-      <p>Check Out</p>
-      <h2><%= date_field_tag :check_out, Date.tomorrow, class: 'font-weight-bold', style: 'width: 260px; border: none;' %></h2>
-    </div>
-    <div class="form-field">
-      <p>Guests</p>
-      <h2><%= select_tag :guests, options_for_select(['1 Guest', '2 Guests', '3 Guests', '4 Guests', '5 Guests', '6 Guests', '7 Guests', '8 Guests']), class: 'font-weight-bold', style: 'border: none;' %></h2>
-    </div>
-    <h5><%= submit_tag('Check Availability', name: nil, class: "form-button btn-danger text-light text-uppercase font-weight-bold mx-auto") %></h5>
-  <% end %>
-</div>
+<%= render 'shared/availability_form' %>
 
 <div class="d-flex flex-column text-center justify-content-around about">
   <h1 class="font-weight-bold mb-4">ABOUT IMPALA</h1>
@@ -57,7 +41,7 @@
   <div class="slider">
     <% @blogs.each do |b| %>
       <div class="blog border">
-        <img src="/assets/<%= b[:image] %>.jpg" alt="" class="blog-image" >
+        <img src="/assets/<%= b[:photo] %>.jpg" alt="" class="blog-image" >
         <div class="p-2">
           <h5 class="blog-title"><%= b[:title] %></h5>
           <p class="blog-info"><%= b[:source] %></p>
