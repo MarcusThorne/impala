@@ -40,7 +40,7 @@
   <div class="slider">
     <% @blogs.each do |b| %>
       <a href="<%= b[:link] ? b[:link] : '#' %>" class="card p-2 m-2" target="_blank">
-        <%= unless b.photo.key.nil? then cl_image_tag b.photo.key, height: 250, width: 300, crop: :fill, class: "card-img-top" end %>
+        <%= unless b.photo.attached? then cl_image_tag b.photo.key, height: 250, width: 300, crop: :fill, class: "card-img-top" end %>
         <div class="card-body">
           <h5 class="card-title"><%= b[:title] %></h5>
           <p class="card-text">Sourced from <%= b[:source] %>, </p>
