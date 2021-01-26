@@ -1,5 +1,5 @@
-<div class="availability border-bottom">
-  <%= form_tag availabilities_path, method: 'get', class: 'availability-form justify-content-around align-items-center' do %>
+<div class="filter border-bottom">
+  <%= form_tag availabilities_path, method: 'get', class: 'filter-form justify-content-around align-items-center' do %>
     <div class="form-field">
       <p>Check In</p>
       <h2><%= date_field_tag :check_in, Date.today, class: 'font-weight-bold', style: 'width: 260px; border: none;' %></h2>
