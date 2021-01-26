@@ -60,7 +60,7 @@ gem 'font-awesome-sass', '~> 5.12.0'
 gem 'cloudinary', '~> 1.16.0'
 gem 'pg_search', '~> 2.3.0'
 # allows you to parse css
-gem 'autoprefixer-rails' 
+gem 'autoprefixer-rails'
 # Simple Calendar
 gem "simple_calendar", "~> 2.0"
 # for generating fake data

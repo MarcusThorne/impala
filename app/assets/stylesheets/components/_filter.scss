@@ -15,6 +15,21 @@
   }
 }
 
+.search {
+  margin-top: 88px;
+}
+
+.search .form-field {
+  display: flex !important;
+  visibility: visible !important;
+  flex-direction: column;
+}
+
+.search .filter-form {
+  display: flex !important;
+  flex-direction: column;
+}
+
 .filter .form-field {
   display: none;
   visibility: hidden;

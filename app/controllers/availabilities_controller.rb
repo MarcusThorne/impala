@@ -18,11 +18,10 @@ class AvailabilitiesController < ApplicationController
       @rooms = Room.all
     end
 
-    @privateRoom = @rooms.select { |r| r.name.downcase == 'private room' }
-    @twoBedDorm = @rooms.select { |r| r.name.downcase == '2 bed dorm' }
-    @fourBedDorm = @rooms.select { |r| r.name.downcase == '4 bed dorm' }
-    @eightBedDorm = @rooms.select { |r| r.name.downcase == '8 bed dorm' }
-    @allRooms = [{name: @privateRoom, title: 'Private Room'}, {name: @twoBedDorm, title: 'Two Bed Dorm'}, {name: @fourBedDorm, title: 'Four Bed Dorm'}, {name: @eightBedDorm, title: 'Eight Bed Dorm'}]
+    @privateRoom = @rooms.select { |r| r.name.downcase == 'private room' }.first
+    @twoBedDorm = @rooms.select { |r| r.name.downcase == '2 bed dorm' }.first
+    @fourBedDorm = @rooms.select { |r| r.name.downcase == '4 bed dorm' }.first
+    @eightBedDorm = @rooms.select { |r| r.name.downcase == '8 bed dorm' }.first
   end
 
   def search

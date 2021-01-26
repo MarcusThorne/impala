@@ -5,22 +5,64 @@
   </div>
 </div>
 
-<%= render 'shared/availability_form' %>
+<%= render 'shared/filter' %>
 
+<div class="about d-flex flex-column text-center justify-content-around">
+  <h1 class="font-weight-bold mb-4">OUR ROOMS</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias delectus possimus necessitatibus debitis, repellat, natus voluptate a at, dolore animi nesciunt accusamus enim dignissimos? Repellat deleniti vel pariatur tempore.</p>
+  <div class="underline"></div>
+</div>
+
+<div class="room-images d-flex justify-content-between align-items-center" style="height: 440px; background-color: #efe3d1; margin-top: 120px">
+  <div class="img-1" style="background-color: black; height: 208px"><img src="/assets/rooms/<%= @privateRoom.name.gsub(' ', '-').downcase %>.jpg" alt="" style="width: 90vw; height: 100%; object-fit: cover; opacity: 0.8;"></div>
+  <div class="img-2" style="background-color: black; height: 208px"><img src="/assets/rooms/<%= @privateRoom.name.gsub(' ', '-').downcase %>-2.jpg" alt="" style="width: 90vw; height: 100%; object-fit: cover; opacity: 0.8;"></div>
+</div>
 <div class="mx-auto container-fluid mt-5">
-  <% @allRooms.each_with_index do |r, i| %>
-    <p class="room-titles"><%= r[:title] %></p>
-    <div class="d-flex">
-      <% r[:name].each do |room| %>
-        <div class="d-flex flex-column bg-light mx-2 room-card <%= room.name.gsub(' ', '-').downcase %>">
-          <img src="/assets/rooms/<%= room.name.gsub(' ', '-').downcase %>.jpg" alt="">
-          <div class="card-body">
-            <h5 class="card-title"><%= room.name %> <%= room.room_number %></h5>
-            <p class="card-text">Floor <%= room.floor %>. <%= 'Private Bathroom' if room.private_bathroom = true %></p>
-            <a href="" class="btn btn-danger">Book Room</a>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+  <h3 class="room-titles"><%= @privateRoom.name.upcase %></h3>
+  <p class="mt-3" style="font-size: 15px;">Our private rooms have a double bed and a private bathroom, perfect for couples or friends.</p>
+  <p class="mt-4">-Capactiy: 2 <br>-15 square metres <br>-Bed size: 1200 X 1900 <br>-<%= 'Private Bathroom' if @privateRoom.private_bathroom = true %></p>
+  <div class="d-flex mt-3">
+    <a href="bookings/new" class="btn btn-danger text-light mt-2">Book Room</a>
+    <i style="font-size: 24px; transform: rotate(315deg);" class="fas fa-arrow-right ml-3"></i>
+  </div>
+</div>
+
+<div class="room-images" style="height: 400px; background-color: #efe3d1; margin-top: 120px; width: 80vw; padding: 40px 0">
+  <div class="img-2" style="background-color: black; width: 100vw;"><img src="/assets/rooms/<%= @twoBedDorm.name.gsub(' ', '-').downcase %>.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;"></div>
+</div>
+<div class="mx-auto container-fluid mt-5">
+  <h3 class="room-titles"><%= @twoBedDorm.name.upcase %></h3>
+  <p class="mt-3" style="font-size: 15px;">Our private rooms have a double bed and a private bathroom, perfect for couples or friends.</p>
+  <p class="mt-4">-Capactiy: 2 <br>-15 square metres <br>-Bed size: 1200 X 1900 <br>-<%= 'Private Bathroom' if @twoBedDorm.private_bathroom = true %></p>
+  <div class="d-flex mt-3">
+    <a href="bookings/new" class="btn btn-danger text-light mt-2">Book Room</a>
+    <i style="font-size: 24px; transform: rotate(315deg);" class="fas fa-arrow-right ml-3"></i>
+  </div>
+</div>
+
+<div class="room-images d-flex justify-content-between align-items-center" style="height: 440px; background-color: #efe3d1; margin-top: 120px">
+  <div class="img-1" style="background-color: black; height: 208px"><img src="/assets/rooms/<%= @fourBedDorm.name.gsub(' ', '-').downcase %>.jpg" alt="" style="width: 90vw; height: 100%; object-fit: cover; opacity: 0.8;"></div>
+  <div class="img-2" style="background-color: black; height: 208px"><img src="/assets/rooms/<%= @fourBedDorm.name.gsub(' ', '-').downcase %>-2.jpg" alt="" style="width: 90vw; height: 100%; object-fit: cover; opacity: 0.8;"></div>
+</div>
+<div class="mx-auto container-fluid mt-5">
+  <h3 class="room-titles"><%= @fourBedDorm.name.upcase %></h3>
+  <p class="mt-3" style="font-size: 15px;">Our private rooms have a double bed and a private bathroom, perfect for couples or friends.</p>
+  <p class="mt-4">-Capactiy: 2 <br>-15 square metres <br>-Bed size: 1200 X 1900 <br>-<%= 'Private Bathroom' if @fourBedDorm.private_bathroom = true %></p>
+  <div class="d-flex mt-3">
+    <a href="bookings/new" class="btn btn-danger text-light mt-2">Book Room</a>
+    <i style="font-size: 24px; transform: rotate(315deg);" class="fas fa-arrow-right ml-3"></i>
+  </div>
+</div>
+
+<div class="room-images" style="height: 400px; background-color: #efe3d1; margin-top: 120px; width: 80vw; padding: 40px 0; margin-left: 20vw;">
+  <div class="img-1" style="background-color: black; width: 100vw; margin-left: -20vw;"><img src="/assets/rooms/<%= @eightBedDorm.name.gsub(' ', '-').downcase %>.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;"></div>
+</div>
+<div class="mx-auto container-fluid mt-5" style="margin-bottom: 120px;">
+  <h3 class="room-titles"><%= @eightBedDorm.name.upcase %></h3>
+  <p class="mt-3" style="font-size: 15px;">Our private rooms have a double bed and a private bathroom, perfect for couples or friends.</p>
+  <p class="mt-4">-Capactiy: 2 <br>-15 square metres <br>-Bed size: 1200 X 1900 <br>-<%= 'Private Bathroom' if @eightBedDorm.private_bathroom = true %></p>
+  <div class="d-flex mt-3">
+    <a href="bookings/new" class="btn btn-danger text-light mt-2">Book Room</a>
+    <i style="font-size: 24px; transform: rotate(315deg);" class="fas fa-arrow-right ml-3"></i>
+  </div>
 </div>
