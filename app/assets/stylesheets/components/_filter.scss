@@ -1,4 +1,4 @@
-.availability .availability-form {
+.filter .filter-form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   height: 200px;
@@ -15,30 +15,45 @@
   }
 }
 
-.availability .form-field {
+.search {
+  margin-top: 88px;
+}
+
+.search .form-field {
+  display: flex !important;
+  visibility: visible !important;
+  flex-direction: column;
+}
+
+.search .filter-form {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.filter .form-field {
   display: none;
   visibility: hidden;
 }
 
 @media(min-width: 768px) {
-  .availability {
+  .filter {
     margin: 0 40px;
     padding: 40px;
   }
 
-  .availability .form-field {
+  .filter .form-field {
     display: flex;
     flex-direction: column;
     visibility: visible;
   }
 
-  .availability .availability-form .form-button {
+  .filter .filter-form .form-button {
     width: 400px;
   }
 }
 
 @media(min-width: 1440px) {
-  .availability .availability-form {
+  .filter .filter-form {
     display: flex;
 
     h5 {

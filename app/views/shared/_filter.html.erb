@@ -1,0 +1,19 @@
+<div class="filter <%= 'search' if current_page?(availabilities_path) %>">
+  <%= form_tag availabilities_path, method: 'get', class: 'filter-form justify-content-around align-items-center' do %>
+    <div class="form-field">
+      <p>Check In</p>
+      <h2><%= date_field_tag :check_in, Date.today, class: 'font-weight-bold', style: 'width: 260px; border: none; color: #3f3f3f;' %></h2>
+    </div>
+    <div class="form-field">
+      <p>Check Out</p>
+      <h2><%= date_field_tag :check_out, Date.tomorrow, class: 'font-weight-bold', style: 'width: 260px; border: none; color: #3f3f3f;' %></h2>
+    </div>
+    <div class="form-field">
+      <p>Guests</p>
+      <h2><%= select_tag :guests, options_for_select(['1', '2', '3', '4', '5', '6', '7', '8']), class: 'font-weight-bold', style: 'border: none; color: #3f3f3f;' %></h2>
+    </div>
+    <h5><%= submit_tag(current_page?(root_path) ? 'Check Availability' : 'Search', name: nil, class: "form-button btn-danger text-light text-uppercase font-weight-bold mx-auto") %></h5>
+  <% end %>
+</div>
+
+<div class="border-bottom w-75 mx-auto" style="<%= 'margin-top: 80px;' if current_page?(availabilities_path) %>"></div>
