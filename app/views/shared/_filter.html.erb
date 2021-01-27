@@ -1,5 +1,5 @@
-<div class="filter <%= 'search' if current_page?(availabilities_path) %>">
-  <%= form_tag availabilities_path, method: 'get', class: 'filter-form justify-content-around align-items-center' do %>
+<div class="filter <%= 'search' if current_page?(rooms_path) %>">
+  <%= form_tag rooms_path, method: 'get', class: 'filter-form justify-content-around align-items-center' do %>
     <div class="form-field">
       <p>Check In</p>
       <h2><%= date_field_tag :check_in, Date.today, class: 'font-weight-bold', style: 'width: 260px; border: none; color: #3f3f3f;' %></h2>
@@ -16,4 +16,4 @@
   <% end %>
 </div>
 
-<div class="border-bottom w-75 mx-auto" style="<%= 'margin-top: 80px;' if current_page?(availabilities_path) %>"></div>
+<div class="border-bottom w-75 mx-auto" style="<%= 'margin-top: 80px;' if current_page?(rooms_path) %>"></div>

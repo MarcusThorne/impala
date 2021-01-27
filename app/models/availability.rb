@@ -1,2 +1,0 @@
-class Availability < ApplicationRecord
-end

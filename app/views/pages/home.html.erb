@@ -8,7 +8,7 @@
     <% @titles.each_with_index do |t, i| %>
       <div class="carousel-item bg-dark <%= 'active' if i == 0 %>">
         <div class="carousel-image %>" alt="Slide <%= i + 1 %>" style="background-image: url('/assets/<%= t[:image] %>.jpg')"></div>
-        <h5 class="carousel-text display-3 text-light"><%= t[:title] %></h5>
+        <h5 class="carousel-text display-3 text-light"><p style="border-bottom: 3px solid white; width: 104px; margin: auto !important;"></p><%= t[:title] %><p style="border-bottom: 3px solid white; width: 104px; margin: auto !important;"></p></h5>
       </div>
     <% end %>
   </div>
@@ -26,7 +26,7 @@
   <% @navLinks.each do |t| %>
     <%= link_to t[:link], class: 'page-link-wraper' do %>
       <div class="page-link text-center mx-auto" style="background-image: url('<%= t[:image] %>')">
-        <h1 class="link-content link-title display-4 text-light"><%= t[:title] %></h1>
+        <h1 class="link-content link-title display-4 text-light"><%= t[:title].capitalize %></h1>
         <p class="link-content link-description text-light text-light"><%= t[:description] %></p>
       </div>
     <% end %>
@@ -40,7 +40,7 @@
   <div class="slider">
     <% @blogs.each do |b| %>
       <a href="<%= b[:link] ? b[:link] : '#' %>" class="card p-2 m-2" target="_blank">
-        <%= if b.photo.attached? then cl_image_tag b.photo.key, height: 250, width: 300, crop: :fill, class: "card-img-top" end %>
+        <%= if b.photo.attached? then cl_image_tag b.photo.key, height: 200, width: 300, crop: :fill, class: "card-img-top", style: 'object-fit: cover;' end %>
         <div class="card-body">
           <h5 class="card-title"><%= b[:title] %></h5>
           <p class="card-text">Sourced from <%= b[:source] %>, </p>
