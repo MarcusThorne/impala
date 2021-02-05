@@ -39,8 +39,8 @@
   <div class="container" style="margin-bottom: 40px"><p class="blog-underline"></p></div>
   <div class="slider">
     <% @blogs.each do |b| %>
-      <a href="<%= b[:link] ? b[:link] : '#' %>" class="card p-2 m-2" target="_blank">
-        <%= if b.photo.attached? then cl_image_tag b.photo.key, height: 200, width: 300, crop: :fill, class: "card-img-top", style: 'object-fit: cover;' end %>
+      <a href="<%= b[:link] ? b[:link] : '#' %>" class="card mx-5" target="_blank">
+        <%= if b.photo.attached? then cl_image_tag b.photo.key, height: 200, crop: :fill, class: "card-img-top", style: 'object-fit: cover;' end %>
         <div class="card-body">
           <h5 class="card-title"><%= b[:title] %></h5>
           <p class="card-text">Sourced from <%= b[:source] %>, </p>
