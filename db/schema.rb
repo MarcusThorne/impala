@@ -58,6 +58,13 @@ ActiveRecord::Schema.define(version: 2021_01_27_163536) do
     t.index ["room_id"], name: "index_bookings_on_room_id"
   end
 
+  create_table "links", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "rooms", force: :cascade do |t|
     t.string "name"
     t.integer "beds"

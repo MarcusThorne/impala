@@ -8,7 +8,7 @@
     <% @titles.each_with_index do |t, i| %>
       <div class="carousel-item bg-dark <%= 'active' if i == 0 %>">
         <div class="carousel-image %>" alt="Slide <%= i + 1 %>" style="background-image: url('/assets/<%= t[:image] %>.jpg')"></div>
-        <h5 class="carousel-text display-3 text-light"><p style="border-bottom: 3px solid white; width: 104px; margin: auto !important;"></p><%= t[:title] %><p style="border-bottom: 3px solid white; width: 104px; margin: auto !important;"></p></h5>
+        <h5 class="carousel-text display-3 text-light"><p style="width: 104px; margin: auto !important;"></p><%= t[:title] %><p style="width: 104px; margin: auto !important;"></p></h5>
       </div>
     <% end %>
   </div>
@@ -35,14 +35,14 @@
 
 <div class="blogs-background container-fluid"></div>
 <div class="blogs-container container-fluid">
-  <h1 class="text-uppercase font-weight-bold container">Blogs and news</h1>
+  <h2 class="text-uppercase font-weight-bold container">Blogs and news</h2>
   <div class="container" style="margin-bottom: 40px"><p class="blog-underline"></p></div>
   <div class="slider">
     <% @blogs.each do |b| %>
       <a href="<%= b[:link] ? b[:link] : '#' %>" class="card mx-5" target="_blank">
-        <%= if b.photo.attached? then cl_image_tag b.photo.key, height: 200, crop: :fill, class: "card-img-top", style: 'object-fit: cover;' end %>
-        <div class="card-body">
-          <h5 class="card-title"><%= b[:title] %></h5>
+        <%= if b.photo.attached? then cl_image_tag b.photo.key, height: 200, crop: :fill, class: "card-img-top", style: 'object-fit: cover; border-radius: 0;' end %>
+        <div class="card-body p-0">
+          <h5 class="card-title pt-1"><%= b[:title] %></h5>
           <p class="card-text">Sourced from <%= b[:source] %>, </p>
           <p class="card-text">on the <%= b[:created_at].strftime("%d-%m-%Y") %></p>
         </div>
